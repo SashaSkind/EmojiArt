@@ -11,6 +11,7 @@
 		D996731E287C7188004951B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996731D287C7188004951B0 /* ContentView.swift */; };
 		D9967320287C718C004951B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D996731F287C718C004951B0 /* Assets.xcassets */; };
 		D9967323287C718C004951B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9967322287C718C004951B0 /* Preview Assets.xcassets */; };
+		D996732E287DB20C004951B0 /* EmojiArtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996732D287DB20C004951B0 /* EmojiArtModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D996731D287C7188004951B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D996731F287C718C004951B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9967322287C718C004951B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D996732D287DB20C004951B0 /* EmojiArtModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmojiArtModel.swift; path = ../../../Downloads/EmojiArtL10/EmojiArt/EmojiArtModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				D996731B287C7188004951B0 /* EmojiArtApp.swift */,
+				D996732D287DB20C004951B0 /* EmojiArtModel.swift */,
 				D996731D287C7188004951B0 /* ContentView.swift */,
 				D996731F287C718C004951B0 /* Assets.xcassets */,
 				D9967321287C718C004951B0 /* Preview Content */,
@@ -139,6 +142,7 @@
 			files = (
 				D996731E287C7188004951B0 /* ContentView.swift in Sources */,
 				D996731C287C7188004951B0 /* EmojiArtApp.swift in Sources */,
+				D996732E287DB20C004951B0 /* EmojiArtModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
