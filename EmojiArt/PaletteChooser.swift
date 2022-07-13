@@ -72,12 +72,12 @@ struct PaletteChooser: View {
 //        .popover(isPresented: $editing) {
 //            PaletteEditor(palette: $store.palettes[chosenPaletteIndex])
 //        }
-        /*.popover(item: $paletteToEdit) { palette in
+        .popover(item: $paletteToEdit) { palette in
             PaletteEditor(palette: $store.palettes[palette])
         }
         .sheet(isPresented: $managing) {
             PaletteManager()
-        }*/
+        }
     }
     
     var gotoMenu: some View {
@@ -122,4 +122,3 @@ struct PaletteChooser_Previews: PreviewProvider {
         PaletteChooser()
     }
 }
-
