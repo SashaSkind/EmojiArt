@@ -10,7 +10,7 @@ import SwiftUI
 struct EmojiArtDocumentView: View {
     @ObservedObject var document: EmojiArtDocument
     
-    let defaultEmojiFontSize: CGFloat = 40
+    @ScaledMetric var defaultEmojiFontSize: CGFloat = 40
     
     var body: some View {
         VStack(spacing: 0) {
@@ -58,12 +58,15 @@ struct EmojiArtDocumentView: View {
                 }
             }
             .onReceive(document.$backgroundImage) { image in
-                zoomToFit(image, in: geometry.size)
+                if autozoom {
+                    zoomToFit(image, in: geometry.size)
+                }
             }
         }
     }
     
-    // L12 state which says whether a certain identifiable alert should be showing
+    @State private var autozoom = false
+    
     @State private var alertToShow: IdentifiableAlert?
     
     // L12 sets alertToShow to an IdentifiableAlert explaining a url fetch failure
@@ -82,11 +85,13 @@ struct EmojiArtDocumentView: View {
     private func drop(providers: [NSItemProvider], at location: CGPoint, in geometry: GeometryProxy) -> Bool {
         var found = providers.loadObjects(ofType: URL.self) { url in
             document.setBackground(.url(url.imageURL))
+            autozoom = true
         }
         if !found {
             found = providers.loadObjects(ofType: UIImage.self) { image in
                 if let data = image.jpegData(compressionQuality: 1.0) {
                     document.setBackground(.imageData(data))
+                    autozoom = true
                 }
             }
         }
@@ -133,7 +138,8 @@ struct EmojiArtDocumentView: View {
     
     // MARK: - Zooming
     
-    @State private var steadyStateZoomScale: CGFloat = 1
+    @SceneStorage("EmojiArtDocumentView.steadyStateZoomScale")
+    private var steadyStateZoomScale: CGFloat = 1
     @GestureState private var gestureZoomScale: CGFloat = 1
     
     private var zoomScale: CGFloat {
@@ -170,7 +176,8 @@ struct EmojiArtDocumentView: View {
     
     // MARK: - Panning
     
-    @State private var steadyStatePanOffset: CGSize = CGSize.zero
+    @SceneStorage("EmojiArtDocumentView.steadyStatePanOffset")
+    private var steadyStatePanOffset: CGSize = CGSize.zero
     @GestureState private var gesturePanOffset: CGSize = CGSize.zero
     
     private var panOffset: CGSize {

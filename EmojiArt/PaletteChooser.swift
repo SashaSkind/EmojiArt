@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// L12 the main View of the Palette-choosing MVVM at the bottom of the screen
 
 struct PaletteChooser: View {
     var emojiFontSize: CGFloat = 40
@@ -15,7 +14,8 @@ struct PaletteChooser: View {
     
     @EnvironmentObject var store: PaletteStore
     
-    @State private var chosenPaletteIndex = 0
+    @SceneStorage("PaletteChooser.chosenPaletteIndex")
+    private var chosenPaletteIndex = 0
     
     var body: some View {
         HStack {
