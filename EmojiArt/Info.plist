@@ -11,7 +11,7 @@
 			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>Sasha.emojiart</string>
+				<string>sasha.emojiart</string>
 			</array>
 		</dict>
 	</array>
@@ -28,7 +28,7 @@
 			<key>UTTypeIconFiles</key>
 			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>Sasha.emojiart</string>
+			<string>sasha.emojiart</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -51,7 +51,7 @@
 			<key>UTTypeIconFiles</key>
 			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>Sasha.emojiart</string>
+			<string>sasha.emojiart</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
