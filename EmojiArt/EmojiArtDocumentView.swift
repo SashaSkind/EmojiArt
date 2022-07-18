@@ -50,7 +50,6 @@ struct EmojiArtDocumentView: View {
                 // return Alert
                 alertToShow.alert()
             }
-            // L12 monitor fetch status and alert user if fetch failed
             .onChange(of: document.backgroundImageFetchStatus) { status in
                 switch status {
                 case .failed(let url):
@@ -64,6 +63,12 @@ struct EmojiArtDocumentView: View {
                     zoomToFit(image, in: geometry.size)
                 }
             }
+            .toolbar {
+                UndoButton(
+                    undo: undoManager?.optionalUndoMenuItemTitle,
+                    redo: undoManager?.optionalRedoMenuItemTitle
+                )
+            }
         }
     }
     
@@ -71,7 +76,6 @@ struct EmojiArtDocumentView: View {
     
     @State private var alertToShow: IdentifiableAlert?
     
-    // L12 sets alertToShow to an IdentifiableAlert explaining a url fetch failure
     private func showBackgroundImageFetchFailedAlert(_ url: URL) {
         alertToShow = IdentifiableAlert(id: "fetch failed: " + url.absoluteString, alert: {
             Alert(
