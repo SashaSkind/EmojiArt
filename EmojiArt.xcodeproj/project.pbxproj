@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9243E10288634E200C3A645 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9243E0F288634E200C3A645 /* Camera.swift */; };
 		D996731C287C7188004951B0 /* EmojiArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996731B287C7188004951B0 /* EmojiArtApp.swift */; };
 		D996731E287C7188004951B0 /* EmojiArtDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996731D287C7188004951B0 /* EmojiArtDocumentView.swift */; };
 		D9967320287C718C004951B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D996731F287C718C004951B0 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D9243E0F288634E200C3A645 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		D984B5E728859A3700F5FACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D9967318287C7188004951B0 /* EmojiArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D996731B287C7188004951B0 /* EmojiArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtApp.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				D996733D287F2BB8004951B0 /* PaletteEditor.swift */,
 				D996732D287DB20C004951B0 /* EmojiArtModel.swift */,
 				D996731D287C7188004951B0 /* EmojiArtDocumentView.swift */,
+				D9243E0F288634E200C3A645 /* Camera.swift */,
 				D9967339287DFB6A004951B0 /* PaletteChooser.swift */,
 				D996732F287DB298004951B0 /* EmojiArtModel.Background.swift */,
 				D9967331287DB3B9004951B0 /* EmojiArtDocument.swift */,
@@ -174,6 +177,7 @@
 				D9967334287DB45E004951B0 /* UtilityExtensions.swift in Sources */,
 				D996733E287F2BB8004951B0 /* PaletteEditor.swift in Sources */,
 				D9967332287DB3B9004951B0 /* EmojiArtDocument.swift in Sources */,
+				D9243E10288634E200C3A645 /* Camera.swift in Sources */,
 				D996732E287DB20C004951B0 /* EmojiArtModel.swift in Sources */,
 				D9967330287DB298004951B0 /* EmojiArtModel.Background.swift in Sources */,
 				D996733A287DFB6A004951B0 /* PaletteChooser.swift in Sources */,
